@@ -1,0 +1,89 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    
+	    String first = "Java";
+	    String second = "Program";
+	  
+	  int count=0;
+	    for(int i=0;i<first.length();i++)
+	    {
+	        for(int j=0;j<second.length();j++)
+	        {
+	            
+	            if(first.charAt(i)==second.charAt(j)){
+	                
+	                
+	               first = first.replace(Character.toString(first.charAt(i)),"");
+                       second= second.replace(Character.toString(fifth.charAt(i)), "");
+	               
+                       count++;
+	               break;
+	                
+	            }
+	        }
+	       
+	        
+	    }
+	    
+	    
+	     
+	     for(int i=0;i<first.length();i++)
+	    {
+	        
+	        for(int j=i+1;j<first.length()-1;j++)
+	        {
+	            
+	            if(first.charAt(i)==first.charAt(j)){
+	                
+	               first =  first.replace(Character.toString(first.charAt(i)), "");
+	            }
+	        }
+	        
+	    }
+	    
+	       
+	    for(int i=0;i<second.length();i++)
+	    {
+	        
+	        for(int j=i+1;j<second.length()-1;j++)
+	        {
+	            
+	            if(second.charAt(i)==second.charAt(j)){
+	                
+	               second =  second.replace(Character.toString(second.charAt(i)), "");
+	            }
+	        }
+	        
+	    }
+	    
+	    
+	    first = first.toLowerCase();
+	    second = second.toLowerCase();
+	    System.out.println(first);
+	    System.out.println(second);
+	    int tot =0;
+	    for(int i=0;i<first.length();i++)
+	    {
+	        
+	         tot = tot+ first.charAt(i) - 'a' +1;
+	    }
+	   int tot1=0;
+	    for(int i=0;i<second.length();i++)
+	    {
+	        
+	         tot1 = tot1+ second.charAt(i) - 'a' +1;
+	    }
+	    if(count==0){
+	        
+	         System.out.println(tot+"" +tot1);
+	    }
+	    
+	    else{
+	    System.out.println(count+""+tot+"" +tot1);
+	    }
+	    
+		
+	}
+}
